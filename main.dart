@@ -1,32 +1,24 @@
+import 'package:bitcointracker/price_screen.dart';
 import 'package:flutter/material.dart';
-import 'input_page.dart';
+import 'price_screen.dart';
 
-void main() {
-  runApp(const bmi());
+void main(){
+  runApp(bitcointracker());
 }
- 
-class bmi extends StatelessWidget {
-  const bmi({super.key});
+
+class bitcointracker extends StatelessWidget {
+  const bitcointracker({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-          appBarTheme: AppBarTheme(
-          color: Color(0xFF0F0F1E),
-
+    return  MaterialApp(
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Colors.blue
+        ),
+        scaffoldBackgroundColor: Colors.white
       ),
-          floatingActionButtonTheme: FloatingActionButtonThemeData(
-              backgroundColor: Colors.red
-          ),
-          scaffoldBackgroundColor: Color(0xFF0F0F1E), //0xFF262A4C
-          textTheme: TextTheme(
-              bodyText2: TextStyle(
-                color: Colors.white,
-              ))
-      ),
-      home: inputpage(),
+      home: price(),
     );
   }
 }
-
